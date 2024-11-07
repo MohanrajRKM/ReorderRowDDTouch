@@ -161,7 +161,7 @@ var grid = new ej.grids.Grid({
     dataSource:stringData,
     allowResizing: true,
     allowReordering: true,
-    // allowRowDragAndDrop: true,
+    allowRowDragAndDrop: true,
     height: 400,
     width: 850,
     autoFit: true,
