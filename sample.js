@@ -161,7 +161,7 @@ var grid = new ej.grids.Grid({
     dataSource:stringData,
     allowResizing: true,
     allowReordering: true,
-    allowRowDragAndDrop: true,
+    // allowRowDragAndDrop: true,
     height: 400,
     width: 850,
     autoFit: true,
@@ -178,7 +178,7 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-var grouping = new ej.buttons.CheckBox();
+    var grouping = new ej.buttons.CheckBox();
     grouping.appendTo('#grouping');
     document.getElementById('grouping').onclick = function () {
         if (grouping.checked) {
@@ -198,16 +198,16 @@ var grouping = new ej.buttons.CheckBox();
     //         grid.allowReordering = false;
     //     }
     // };
-    // var rowDD = new ej.buttons.CheckBox();
-    // rowDD.appendTo('#rowDD');
-    // document.getElementById('rowDD').onclick = function () {
-    //     if (rowDD.checked) {
-    //         grid.allowRowDragAndDrop = true;
-    //     }
-    //     else {
-    //         grid.allowRowDragAndDrop = false;
-    //     }
-    // };
+    var rowDD = new ej.buttons.CheckBox();
+    rowDD.appendTo('#rowDD');
+    document.getElementById('rowDD').onclick = function () {
+        if (rowDD.checked) {
+            grid.allowRowDragAndDrop = true;
+        }
+        else {
+            grid.allowRowDragAndDrop = false;
+        }
+    };
     var rtl = new ej.buttons.CheckBox();
     rtl.appendTo('#rtl');
     document.getElementById('rtl').onclick = function () {
